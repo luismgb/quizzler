@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Quizzler
 //
-//  Created by Angela Yu on 25/08/2015.
-//  Copyright (c) 2015 London App Brewery. All rights reserved.
+//  Created by Luis M Gonzalez on 12/19/17.
+//  Copyright © 2017 Luis M Gonzalez. All rights reserved.
 //
 
 import UIKit

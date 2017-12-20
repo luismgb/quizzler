@@ -8,4 +8,4 @@ iOS App that quizzes users and keeps track of results.
 
 Luis M Gonzalez
 
-Assets by London App Brewery.
+Assets and data provided by London App Brewery.

@@ -13,7 +13,13 @@ class ViewController: UIViewController {
     let allQuestions = QuestionBank()
     var pickedAnswer: Bool = false
     var questionIndex: Int = 0
+    var questionNumber: Int {
+        return questionIndex + 1
+    }
     var score: Int = 0
+    var numberOfQuestions: Int {
+        return allQuestions.list.count
+    }
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -25,8 +31,8 @@ class ViewController: UIViewController {
         
         nextQuestion()
     }
-
-
+    
+    
     @IBAction func answerPressed(_ sender: AnyObject) {
         if sender.tag == 1 {
             pickedAnswer = true
@@ -43,12 +49,12 @@ class ViewController: UIViewController {
     
     func updateUI() {
         scoreLabel.text = "Score: \(score)"
-        progressLabel.text = "\(questionIndex + 1)/\(allQuestions.list.count)"
+        progressLabel.text = "\(questionIndex + 1)/\(numberOfQuestions)"
     }
     
-
+    
     func nextQuestion() {
-        if questionIndex <= (allQuestions.list.count - 1) {
+        if questionNumber <= numberOfQuestions {
             questionLabel.text = allQuestions.list[questionIndex].questionText
             updateUI()
         } else {
@@ -59,7 +65,6 @@ class ViewController: UIViewController {
             })
             
             alert.addAction(restartAction)
-            
             present(alert, animated: true, completion: nil)
         }
     }

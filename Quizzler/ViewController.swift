@@ -88,7 +88,6 @@ class ViewController: UIViewController {
         questionIndex = 0
         score = 0
         nextQuestion()
-        updateUI()
     }
     
 }

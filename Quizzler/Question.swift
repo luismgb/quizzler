@@ -14,7 +14,7 @@ class Question {
     let answer: Bool
     
     init(text: String, correctAnswer: Bool) {
-        self.questionText = text
-        self.answer = correctAnswer
+        questionText = text
+        answer = correctAnswer
     }
 }

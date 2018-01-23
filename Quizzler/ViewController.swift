@@ -60,6 +60,11 @@ class ViewController: UIViewController {
       questionLabel.text = allQuestions.list[questionIndex].questionText
       updateUI()
     } else {
+      /*Subtracting one to the questionIndex will fix a bug where the question
+      number displayed after finishing quiz was greater than the number of
+      questions.*/
+      questionIndex -= 1
+      
       updateUI()
       let alert = UIAlertController(title: "Awesome", message: "You've finished all the questions, do you want to start over", preferredStyle: .alert)
       
